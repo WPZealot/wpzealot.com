@@ -13,13 +13,13 @@
 	//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	require_once( get_template_directory() . '/inc/ajax/contact.php' );
 	require_once( get_template_directory() . '/inc/ajax/comment.php' );
-	require_once( get_template_directory() . '/inc/ajax/login.php' );
+	require_once( get_template_directory() . '/inc/cpt.php' );
 
 	//=============================================================================
 	// Enqueue Scripts
 	//=============================================================================
-	add_action('wp_enqueue_scripts', 'mathiom_scripts');
-	function mathiom_scripts(){
+	add_action('wp_enqueue_scripts', 'theme_scripts');
+	function theme_scripts(){
 		wp_enqueue_script('jQuery');
 		wp_enqueue_script('plugins', get_bloginfo('template_directory') . '/js/plugins.js' );
 		wp_enqueue_script('main', get_bloginfo('template_directory') . '/js/main.js');
@@ -77,15 +77,6 @@
 	//###########################################################################
 	// Helpers
 	//###########################################################################
-	//=============================================================================
-	// Shorthand for a prettier print_r
-	//=============================================================================
-	function ppr($obj){
-		echo '<pre>';
-			print_r($obj);
-		echo '</pre>';
-	}
-
 	//=============================================================================
 	// Gets the current URL
 	//=============================================================================

@@ -5,7 +5,7 @@
 		//========================================================================*/ ?>
 		<div class="title-block">
 			<h1><img src="<?php bloginfo('template_directory');?>/img/logo.png" alt="Lab of Oz"></h1>
-			<h2><?php _e("for professional wordpress developers") ?></h2>
+			<h2><?php _e("[...] for professional wordpress developers") ?></h2>
 		</div>
 
 		<h2 class="align-center nostyle"><?php _e('<b>Mission:</b> Advance the web, through you.') ?></h2>
