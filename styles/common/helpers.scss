@@ -1,0 +1,40 @@
+//=============================================================================
+// Groups
+//=============================================================================
+.group-generic{
+	@include clearfix;
+	> aside{
+		float: left;
+		width: $groupLeft;
+	}
+	> div{
+		float: left;
+		width: $groupRight;
+	}
+}
+
+
+//=============================================================================
+// Common Helpers
+//=============================================================================
+.clear{clear: both;}
+[reveal]{opacity: 0;}
+.hidden{display: none;}
+.pull-right{float: right; @include clearfix;}
+.pull-left{float: left; @include clearfix;}
+.float-right{float: right;}
+.float-left{float: left;}
+.align-left{text-align: left;}
+.align-center{text-align: center;}
+.align-right{text-align: right;}
+
+//=============================================================================
+// No Styles 
+//=============================================================================
+a.nostyle, a.nostyle:hover{border: none;}
+
+h2.nostyle{
+	color: $color;
+	font-weight: 300;
+	&:hover{color: $color-hover;}
+}

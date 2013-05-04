@@ -1,0 +1,164 @@
+//=============================================================================
+// Styles for forms
+//=============================================================================
+form{
+	position: relative;
+	width: $gridStd;
+	@include clearfix;
+
+	//=============================================================================
+	// Standard Inputs
+	//=============================================================================
+	input, [rel="preview"], textarea{
+		border: 1px solid $colorSoft;
+		border-radius: 3px;
+		padding: 0 4px;
+		font-size: 14px;
+		line-height: 30px;
+		color: $color;
+
+		@include transition(border 0.25s linear);
+		&:hover{border: 1px solid $color;}
+		&:focus{
+			border: 1px solid $color-hover;
+			outline: none;
+		}
+
+		//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		// Buttons
+		//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		&[type="submit"], &[type="button"]{
+			float: right;
+			@include button(#fff);
+			padding: 0 16px;
+		}
+	}
+	label{cursor: pointer;}
+	input[type="submit"]{
+		margin-left: 20px;
+	}
+	//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// Checkboxes
+	//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	input[type="checkbox"] {
+		display:none;
+	}
+
+	input[type="checkbox"] + label.css-label {
+		padding-left:20px;
+		height:15px; 
+		display:inline-block;
+		line-height:15px;
+		background-repeat:no-repeat;
+		background-position: 0 0;
+		font-size:15px;
+		vertical-align:middle;
+		cursor:pointer;
+	}
+
+	input[type="checkbox"]:checked + label.css-label {
+		background-position: 0 -15px;
+	}
+	
+	.css-label{
+		background-image:url(http://csscheckbox.com/checkboxes/dark-check-green.png);
+	}
+	
+
+	//=============================================================================
+	// Label/Input groups
+	//=============================================================================
+	.group{
+		position: relative;
+		margin-bottom: 16px;
+		&.chosen{margin-bottom: 6px;}
+
+		@include clearfix;
+		label{width: $groupLeft}
+		input, [rel="preview"], textarea, .message-error{width: $groupRight - 10}
+		select{
+			width: $groupRight - 2;
+			max-height: 200px;
+		}
+		label, input, select, [rel="preview"], .message-error{
+			margin: 0;
+			display: block;
+			float: left;
+		}
+		textarea{
+			height: 100px;
+			font-size: 14px;
+			line-height: 21px;
+			max-width: $groupRight - 10;
+		}
+		[rel="preview"]{
+			padding: 10px 4px;
+			border: 1px dashed $colorSoft;
+		}
+
+		//=============================================================================
+		// Chosen Library
+		//=============================================================================
+		.chzn-container-multi{
+			width: $groupRight !important;
+			font-size: 14px;
+			.chzn-choices{
+				background: #fff;
+				border-radius: 3px;
+				padding: 0 4px;
+
+				@include transition(border 0.25s linear);
+				&:hover{border: 1px solid $color;}
+				&:focus{border: 1px solid $color-hover;}
+			}
+			.search-field input{
+				padding: 0 4px;
+				height: 30px;
+			}
+			.chzn-drop{
+				width: $groupRight - 2 !important;
+			}
+			.search-choice{margin-top: 5px;}
+		}
+		.chzn-container-active{
+			.chzn-choices{border: 1px solid $color-hover !important;}
+			.search-field input{color: $color !important;}
+		}
+	}
+
+	//=============================================================================
+	// Error Messages
+	//=============================================================================
+	div.message-error, .group div.message-error{
+		@include clearfix;
+		background: $red;
+		display: none;
+		float: right !important;
+		padding: 0 5px;
+		position: relative;
+		top: -2px;
+		z-index: 0;
+		color: #fff;
+		border-bottom-right-radius: 3px;
+		border-bottom-left-radius: 3px;
+	}
+}
+
+.message-ajax{
+	@include clearfix;
+	background: $red;
+	display: none;
+	padding: 0 10px;
+	margin-bottom: 0.75em;
+	position: relative;
+	top: -2px;
+	z-index: 0;
+	color: #fff;
+	border-radius: 3px;
+	border: 1px solid darken($red, 10%);
+
+	&.success{
+		background: $green;
+		border: 1px solid darken($green, 10%);
+	}
+}

@@ -1,0 +1,19 @@
+footer{
+	width: $gridStd;
+	margin: auto;
+	padding: 18px 0;
+	border-top: 1px solid $colorGhost;
+	margin-top: 64px;
+
+	p, h6{
+		float: left;
+		font-size: 12px;
+		margin-top: 0;
+		color: $colorSoft;
+	}
+	h6{
+		float: right;
+		color: $color;
+		font-weight: 400;
+	}
+}

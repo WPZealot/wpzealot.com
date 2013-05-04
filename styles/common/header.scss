@@ -1,0 +1,44 @@
+//=============================================================================
+// Header
+//=============================================================================
+header.main {
+	@include clearfix;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background: #fff;
+	z-index: 1000;
+
+	div{
+		@include clearfix;
+		width: $gridStd;
+		margin: auto;
+		border-bottom: 1px solid $colorGhost;
+
+		menu{
+			float: right;
+			width: $gridStd;
+			padding: 0;
+			a{
+				position: relative;
+				font-size: 14px;
+				margin-right: 20px;	
+
+				&.right{
+					float: right;
+					position: relative;
+					top: 4px;
+				}
+				&.last{
+					margin-right: 0;
+				}
+
+				img{
+					position: relative;
+					top: 6px;
+				}
+				&:hover{color: $colorLink-hover;}
+			}
+		}
+	}
+}

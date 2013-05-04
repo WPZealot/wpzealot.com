@@ -1,0 +1,87 @@
+//=============================================================================
+// CORE
+//=============================================================================
+::selection {color: $colorSoft; background: $color-hover}
+::-moz-selection {color: $colorSoft; background: $color-hover}
+
+a{
+	font-family: $openSans;
+	color: $colorLink;
+	text-decoration: none;
+
+	@include transition(color 0.25s ease-in 0s);
+	&:hover{color: $colorLink-hover;}
+}
+body, html{
+	height: 100%;
+}
+
+body, p{
+	font-size: 18px;
+	line-height: 30px;
+	color: $color;
+	@include animation(fadeIn 0.25s ease-in);
+}
+body{padding-top: 64px;}
+
+blockquote {
+	background: $colorGhost;
+	border-left: 10px solid $colorSoft;
+	margin: 1.5em 0;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+
+	&:before {
+		color:$colorSoft;
+		content:open-quote;
+		font-size:4em;
+		line-height:.1em;
+		margin-right:.25em;
+		vertical-align:-.4em;
+	}
+}
+
+li{
+	@include transition(color 0.25s ease-in 0s);
+	&:hover{color: $color-hover;}
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $openSans;
+	font-weight: bold;
+	color: $color;
+	&.soft{color: $colorSoft;}
+	&:hover{color: $color-hover;}
+	@include transition(color 0.25s ease-in 0s);
+}
+h1{
+	font-size: 48px;
+	line-height: 56px;
+	font-weight: 300;
+}
+h2{
+	font-size: 24px;
+	font-weight: bold;
+	color: $colorLink;
+	margin-top: 96px;
+	b{font-weight: 400;}
+	&:hover{color: $colorLink-hover;}
+	small{font-size: 14px;}
+}
+h3{
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	small{font-size: 14px;}
+}
+hr{
+	border: none;
+	border-bottom: 1px solid $colorGhost;
+	margin-top: 18px;
+	margin-bottom: 27px;
+}
+
+p{
+	@include transition(color 0.25s ease-in 0s);
+	&:hover{color: $color-hover;}
+}

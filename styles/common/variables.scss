@@ -1,0 +1,19 @@
+$openSans: 'Open Sans', sans-serif;
+
+$color: 		#505050;
+$color-hover: 	#222;
+$colorSoft: 	#aaa;
+$colorLink: 	#eb6c57;
+$colorLink-hover: darken($colorLink, 20%);
+$colorGhost: 	#efefef;
+
+$red: 			#eb6c57;
+$green: 		#7dd58e;
+$black: 		#333333;
+
+$btnRed: 		#e16767;
+$btnBlue: 		#4a8ecd;
+
+$gridStd: 		700px;
+$groupLeft: 	$gridStd * .25;
+$groupRight: 	$gridStd * .75;
